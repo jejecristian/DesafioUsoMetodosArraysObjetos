@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matias Gomez, Romina Rios, Ludwig Espinosa, Cristian Torres">
+    <meta name="keywords"
+        content="desafioLatam, html, css, bootstrap, javascript, funciones, condicionales, ciclos, arreglos, objetos">
+
+    <!-- Bootstrap CSS v5.1.3-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Desafio Javascript</title>
+</head>
+
+
+<body>
+
+    <!-- Titulo principal-->
+    <header class="bg-dark text-white py-3">
+        <div>
+            <h1 class="text-center">Desafio Javascript</h1>
+            <h6 class="px-1 px-lg-5">Arreglos y objetos Dia 4 - Uso de metodos con Arrays y Objetos.</h6>
+            <h6 class="px-1 px-lg-5">Alumnos: Matias Gomez, Romina Rios, Ludwig Espinosa, Cristian Torres</h6>
+        </div>
+    </header>
+
+    <!-- Muestra historial Centro Médico -->
+    <section class="container mt-5">
+        <h6>Descripción:</h6>
+        <p>El centro médico dental de Ñuñoa se ha puesto en contacto una vez más con usted, para
+            que desarrolle algunas modificaciones con respecto a sus consultas médicas y desplegar
+            otra información que se le indicará más adelante. En esta ocasión, le piden hacer
+            modificaciones a la página HTML que disponen, por lo que se le entrega el código de la
+            página para que realice su trabajo. Dentro del código, se le señala donde tiene que realizar
+            las modificaciones.</p>
+        <p>Como regla, usted no puede eliminar ni modificar los datos que están en el interior de los
+            arreglos y objetos de manera permanente. Todas las modificaciones solicitadas deben
+            hacerse mediante el uso de funciones integradas en arreglos y objetos, como push(), shift(),
+            split(), entre otras que estime conveniente.</p>
+        
+        <h6>Datos iniciales: </h6>
+        <div id="datosIniciales" class="container border border-5 rounded-3 border-secondary py-2 my-2">  
+        </div>
+
+        <h6>Requerimientos:</h6>
+
+        <!-- Objetos agregados en Trauma mediante JS -->
+        <div>
+            <p>1. Agregar las siguientes horas al arreglo de Traumatología.</p>
+            <img class="img-fluid" src="assets/img/agregar.PNG" alt="agregar.png">
+            <p id="respuesta1" class="my-3 text-success fw-bold"></p>
+        </div>
+
+        <!-- Elimina primer y ultimo registro de Radio mediante JS -->
+        <p>2. Eliminar el primer y último elemento del arreglo de Radiología.</p>
+        <p id="respuesta2" class="mb-3 text-success fw-bold"></p>
+
+        <!-- Imprime datos de objetos de Dental en el html mediante JS -->
+        <p>3. Imprimir en la página HTML, mediante document.write y/o la funciones que estime
+            conveniente, la lista de consultas médicas de Dental. Sin embargo, debe hacerlo
+            separando por un guión cada dato desplegado y cada fila de información debe estar
+            separada por un párrafo.</p>
+        <p>Ejemplo:</p>
+        <p>8:30 - ANDREA ZUÑIGA - MARCELA RETAMAL - 11123425-6 - ISAPRE</p>
+        <p>11:00 - MARIA PIA ZAÑARTU - ANGEL MUÑOZ - 9878789-2 - ISAPRE...</p>
+        <div id="respuesta3" class="text-success fw-bold py-2 my-2">  
+        </div>
+
+        <!-- Imprime los nombres de todos los pacientes en el html mediante JS -->
+        <p>4. Imprimir un listado total de todos los pacientes que se atendieron en el centro
+            médico. Para esto, deberá unir todos los nombres de pacientes e imprimir uno por
+            cada párrafo.</p>
+        <p>Ejemplo:</p>
+        <p>FRANCISCA ROJAS</p>
+        <p>PAMELA ESTRADA</p>
+        <p>ARMANDO LUNA...</p>
+        <p id="respuesta4" class="mb-3 text-success fw-bold"></p>
+        <table class="table table-success table-striped" id="tabla">
+            <thead>
+                <tr>
+                    <th>PACIENTES</th>
+                </tr>
+            </thead>
+            <tbody id="tablaRespuesta4">
+                <!-- En el cuerpo de esta tabla se imprimen todos los registros mediante JS -->
+            </tbody>
+        </table>
+
+        <!-- Filtrar pacientes ISAPRE de Dental mediante JS -->
+        <p>5. Filtrar aquellos pacientes que indican ser de ISAPRE en la lista de consultas médicas
+            de Dental.</p>
+        <p>Ejemplo:</p>
+        <p>MARCELA RETAMAL - ISAPRE</p>
+        <p>ANGEL MUÑOZ - ISAPRE</p>
+        <p>ANA SEPULVEDA - ISAPRE</p>
+        <div id="respuesta5" class="text-success fw-bold py-2 my-2">  
+        </div>
+
+        <!-- Filtrar pacientes FONASA de Trauma mediante JS -->
+        <p>6. Filtrar aquellos pacientes que indican ser de FONASA en la lista de consultas
+            médicas de Traumatología.</p>
+        <p>Ejemplo:</p>
+        <p>PAULA SÁNCHEZ - FONASA</p>
+        <div id="respuesta6" class="text-success fw-bold py-2 my-2">  
+        </div>
+
+    </section>
+
+    <!-- Pie de página-->
+    <footer class="bg-dark text-white text-center py-5 ">
+        <h4>DESAFIO JAVASCRIPT</h4>
+    </footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper v5.1.3 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom Javascript-->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
